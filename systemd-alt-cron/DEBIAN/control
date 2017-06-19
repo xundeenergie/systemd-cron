@@ -1,11 +1,11 @@
-Package: systemd-cron
-Version: 0.2
+Package: systemd-alt-cron
+Version: 0.4.1
 Section: misc
 Priority: extra
 Architecture: all
 Maintainer: Jakobus Schürz <xundeenergie@gmail.com>
 Homepage: http://github.com/xundeenergie/systemd-cron
-Provides: systemd-cron
-Depends: systemd
+Provides: systemd-alt-cron
+Depends: systemd (>= 229), my-config
 Description: Many systemd.timer and systemd.targets to replace cron and anacron easily 
  Replace cron and anacron with this systemd-units for hourly, daily, weekly... runs and for systemd-units running afterboot.

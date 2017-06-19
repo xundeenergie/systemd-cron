@@ -10,4 +10,4 @@ Persistent=true
 Unit=timer-monthly.target
 
 [Install]
-WantedBy=timers.target
+WantedBy=timer-xe.target

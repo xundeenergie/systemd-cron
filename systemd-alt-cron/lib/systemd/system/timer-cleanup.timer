@@ -10,5 +10,4 @@ AccuracySec=1us
 RandomizedDelaySec=10min
 
 [Install]
-WantedBy=timers.target
-
+WantedBy=timer-xe.target

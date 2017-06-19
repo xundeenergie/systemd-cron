@@ -9,4 +9,4 @@ AccuracySec=2min
 Unit=timer-dmin.target
 
 [Install]
-WantedBy=timers.target
+WantedBy=timer-xe.target
