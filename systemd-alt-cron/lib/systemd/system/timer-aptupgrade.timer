@@ -4,8 +4,6 @@ Description=Runs backup %I before system-update/upgrade with apt
 PartOf=mkbackup@SNP.target
 OnFailure=status-email-root@%n.service
 BindsTo=timer-xe.target
-RefuseManualStart=yes
-RefuseManualStop=yes
 
 [Timer]
 OnActiveSec=1s
