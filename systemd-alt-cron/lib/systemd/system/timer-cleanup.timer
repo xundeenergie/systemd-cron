@@ -1,6 +1,10 @@
 [Unit]
 Description=Timer for cleanup btrfs-filesystem
 OnFailure=status-email-root@%n.service
+PartOf=timer-xe.target
+Before=timer-xe.target
+RefuseManualStart=yes
+RefuseManualStop=yes
 
 [Timer]
 OnCalendar=*-*-* 0/6:10:00

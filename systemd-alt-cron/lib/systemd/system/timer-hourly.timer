@@ -1,6 +1,10 @@
 [Unit]
 Description=Hourly Timer
 OnFailure=status-email-root@%n.service
+PartOf=timer-xe.target
+Before=timer-xe.target
+RefuseManualStart=yes
+RefuseManualStop=yes
 
 [Timer]
 OnBootSec=15min
