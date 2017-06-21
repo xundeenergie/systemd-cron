@@ -1,9 +1,8 @@
 [Unit]
 Description=Runs backup %I after pluggin in external HD
-#BindsTo=mkbackup@BKP.target
-PartOf=mkbackup@BKP.target
+BindsTo=mkbackup@BKP.target
+#PartOf=mkbackup@BKP.target
 OnFailure=status-email-root@%n.service
-BindsTo=timer-xe.target
 RefuseManualStart=yes
 RefuseManualStop=yes
 
