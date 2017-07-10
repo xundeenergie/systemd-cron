@@ -1,6 +1,4 @@
 lib/systemd/system/timer-afterboot.target
-lib/systemd/system/timer-aptupgrade.target
-lib/systemd/system/timer-aptupgrade.timer
 lib/systemd/system/timer-cleanup.target
 lib/systemd/system/timer-daily.target
 lib/systemd/system/timer-dmin.target
@@ -9,8 +7,6 @@ lib/systemd/system/timer-manually.target
 lib/systemd/system/timer-manually.timer
 lib/systemd/system/timer-minute.target
 lib/systemd/system/timer-monthly.target
-lib/systemd/system/timer-plugin.target
-lib/systemd/system/timer-plugin.timer
 lib/systemd/system/timer-weekly.target
 lib/systemd/system/timer-yearly.target
 lib/systemd/system/timer-xe.target
