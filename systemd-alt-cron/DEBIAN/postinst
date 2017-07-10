@@ -62,13 +62,14 @@ done
 
 # instantiated systemd-units
 
-DEVICE=$(awk '$9 == "btrfs" && $5 == "/" {gsub("/dev/","",$10);print $10}' /proc/self/mountinfo)
-ROT=$(cat /sys/block/$(printf '%s' "$DEVICE" | sed 's/[0-9]//g')/queue/rotational)
-if test $ROT -eq 0; then
-    INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
-else
-    INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
-fi
+#DEVICE=$(awk '$9 == "btrfs" && $5 == "/" {gsub("/dev/","",$10);print $10}' /proc/self/mountinfo)
+#ROT=$(cat /sys/block/$(printf '%s' "$DEVICE" | sed 's/[0-9]//g')/queue/rotational > /dev/null 2>&1 || exit 1)
+#if test $ROT -eq 0; then
+#    INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
+#else
+#    INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
+#fi
+INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
 CINT=$(for i in $INTERVALS;do echo "timer-${i}.timer" ; done)
 SERVICES="timer-xe.target $CINT"
 
