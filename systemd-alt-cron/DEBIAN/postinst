@@ -69,7 +69,7 @@ done
 #else
 #    INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
 #fi
-INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
+INTERVALS="afterboot cleanup daily dmin hourly manually minute monthly weekly yearly"
 CINT=$(for i in $INTERVALS;do echo "timer-${i}.timer" ; done)
 SERVICES="timer-xe.target $CINT"
 

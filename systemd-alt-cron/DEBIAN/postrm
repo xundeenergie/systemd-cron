@@ -14,7 +14,7 @@ fi
 # put in full unit-name. for example "mkbackup@hourly.service"
 #SERVICES="mkbackup.target backup.automount var-cache-backup.automount btrfs-scrub@var-cache-btrfs_pool_SYSTEM.service mkbackup@manually.service mkbackup@aptupgrade.service mkbackup@daily.service mkbackup@weekly.service mkbackup@monthly.service mkbackup@plugin.service mkbackup@manually.service"
 SERVICES="timer-xe.target $CINT"
-INTERVALS="afterboot aptupgrade cleanup daily dmin hourly manually minute monthly plugin weekly yearly"
+INTERVALS="afterboot cleanup daily dmin hourly manually minute monthly weekly yearly"
 CINT=$(for i in $INTERVALS;do echo "timer-${i}.timer" ; done)
 INSTSERVICES="${CINT}"
 
