@@ -1,5 +1,5 @@
 Package: systemd-alt-cron
-Version: 0.4.19
+Version: 0.4.20
 Section: misc
 Priority: extra
 Architecture: all
